@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css"
+    />
+    <title>Arduino Projects</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            Project GIST Code!
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <table
+        id="example"
+        class="table table-striped table-bordered"
+        cellspacing="0"
+        width="100%"
+      >
+        <thead>
+          <tr>
+            <td>Category</td>
+            <td>Name</td>
+            <td>GIST Link</td>
+            <td>Search Link</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Basic</td>
+            <td>RGB</td>
+            <td>
+              https://gist.github.com/maharshisolanki/8d19ac715e725e31ac279e402d1fd6ea
+            </td>
+            <td>#</td>
+          </tr>
+          <tr>
+          <td>Basic</td>
+            <td>Sweep</td>
+            <td>
+              https://gist.github.com/maharshisolanki/065b9fe043a3558d182d5df25df8c2f4&sa=D&ust=1590428390737000
+            </td>
+            <td>#</td>
+          </tr>
+          <tr>
+          <td>Basic</td>
+            <td>Knob</td>
+            <td>
+
+              https://gist.github.com/maharshisolanki/4435bb01f54ad8f2a3ce89420d36ca8f
+            </td>
+            <td>#</td>
+          </tr>
+          <tr>
+          <td>Basic</td>
+            <td>Pot + RGB</td>
+            <td>
+              https://gist.github.com/maharshisolanki/61232e9d4d3d3199e2f14600379abe58
+            </td>
+            <td>#</td>
+          </tr>
+          <td>Sensor</td>
+            <td>Ultrasonic</td>
+            <td>
+              https://gist.github.com/maharshisolanki/ab2ecfa136bd835c8c2d2d0aed14219d            </td>
+            <td>#</td>
+          </tr>
+          <td>Sensor</td>
+            <td>LCD</td>
+            <td>
+              https://gist.github.com/maharshisolanki/f57fbe3a5b44dabcf0d620c7c5057198            </td>
+            <td>#</td>
+          </tr>
+          <tr>
+            <td>Project</td>
+            <td>Ultrasonic + LCD</td>
+            <td>
+              https://gist.github.com/maharshisolanki/47f4409f39527534086a1a2fe13774a6            </td>
+            <td>#</td>
+          </tr>
+          <td>Basic</td>
+            <td>Button and LEDs</td>
+            <td>
+              https://gist.github.com/maharshisolanki/7ba1657724238e083dad5e7d363a87f5        </td>
+            <td>#</td>
+          </tr><td>Project</td>
+            <td>LDR+LED</td>
+            <td>
+              https://gist.github.com/maharshisolanki/b2cf794f885607ca9e96ef8c5256f9e1            </td>
+            <td>#</td>
+          </tr>
+          <td>Project</td>
+            <td>Ultrasonic + Servo</td>
+            <td>
+              https://gist.github.com/maharshisolanki/93c32abe096d1e9b04f7975c69f10146            </td>
+            <td>#</td>
+          </tr>
+          <td>Sensor</td>
+            <td>LCD</td>
+            <td>#</td>
+            <td>#</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.12.4.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("tr").each(function () {
+          $(this)
+            .find("td")
+            .each(function () {
+              var t = $(this)
+                .text()
+                .replace(/\s+|\t/g, "");
+              if (t.includes("https://www.google.co.in/search?q=")) {
+                $(this).html(
+                  "<a href='" +
+                    t +
+                    "' class='btn btn-primary' target='_blank'>Search Now</a>"
+                );
+              } else if (t.includes("https://gist.github.com/")) {
+                $(this).html(
+                  "<a href='" +
+                    t +
+                    "' class='btn btn-success' target='_blank'>Open</a>"
+                );
+              }
+            });
+        });
+        $("#example").DataTable();
+      });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-113859707-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-113859707-1");
+    </script>
+
+    <br />
+
+    <center>Powered by Encube Labs India</center>
+  </body>
+</html>
