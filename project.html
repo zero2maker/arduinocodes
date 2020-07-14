@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css"
+    />
+    <title>Arduino Projects</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <center>Arduino Codes for Makers</center>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <table
+        id="example"
+        class="table table-striped table-bordered"
+        cellspacing="0"
+        width="100%"
+      >
+        <thead>
+          <tr>
+            <td>Sensor</td>
+            <td>Name</td>
+            <td>GIST Link</td>
+            <td>Search Link</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ultrasonic</td>
+            <td>Ultrasonic serial moniter</td>
+            <td>
+             https://gist.github.com/japarejiya/2f7d51177284e237291ebc9129565a87
+            </td>
+            <td>#</td>
+          </tr>
+          <tr>
+          <td>Ultrasonic</td>
+            <td> ultrasonic_and_servo</td>
+            <td>
+              https://gist.github.com/japarejiya/e343c44c9e03363be0ce2be965ee6c11
+            </td>
+            <td>#</td>
+          </tr>
+          <tr>
+          <td>Ultrasonic</td>
+            <td>Ultrasonic with LCD Display</td>
+            <td>
+
+              https://gist.github.com/japarejiya/9fa0a6a0c48b7a86ede357487fde4e1b
+            </td>
+            <td>#</td>
+          </tr>
+          <tr>
+          <td>Ultrasonic</td>
+            <td> Ultrasonic with Buzzer </td>
+            <td>
+              https://gist.github.com/japarejiya/39e831185a764b9c35e5eb56de95b871
+            </td>
+            <td>#</td>
+          </tr>
+          <td>Ultrasonic</td>
+            <td>Ultrasonic with LED</td>
+            <td>
+              https://gist.github.com/japarejiya/bc6fa2d20819053db309d043e4247958</td>
+            <td>#</td>
+          </tr>
+          <td>PIR</td>
+            <td>PIR with Ultrasonic and buzzer</td>
+            <td>
+             https://gist.github.com/japarejiya/5f5324a88eb0ab8d90f7000fafd55aab            </td>
+            <td>#</td>
+          </tr>
+          <tr>
+            <td>PIR</td>
+            <td>PIR sensor with lED</td>
+            <td>
+              https://gist.github.com/japarejiya/07ce724705c9345accd9f243d0126155            </td>
+            <td>#</td>
+          </tr>
+          
+          <td>PIR</td>
+            <td>PIR with LCD and button </td>
+            <td>
+              https://gist.github.com/japarejiya/ef1e55534e2084e3f2a62635ad818855          </td>
+            <td>#</td>
+          </tr>
+          <td>PIR</td>
+            <td>PIR with LED and buzzer</td>
+            <td>
+              https://gist.github.com/japarejiya/201e78183ec1d7f1ecd41cfd8bdd8367           </td>
+            <td>#</td>
+          </tr>
+          <td>PIR</td>
+            <td>PIR with serial monitor</td>
+            <td>https://gist.github.com/japarejiya/53b0d89f0e32846441db40bc040db718</td>
+            <td>#</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.12.4.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("tr").each(function () {
+          $(this)
+            .find("td")
+            .each(function () {
+              var t = $(this)
+                .text()
+                .replace(/\s+|\t/g, "");
+              if (t.includes("https://www.google.co.in/search?q=")) {
+                $(this).html(
+                  "<a href='" +
+                    t +
+                    "' class='btn btn-primary' target='_blank'>Search Now</a>"
+                );
+              } else if (t.includes("https://gist.github.com/")) {
+                $(this).html(
+                  "<a href='" +
+                    t +
+                    "' class='btn btn-success' target='_blank'>Open</a>"
+                );
+              }
+            });
+        });
+        $("#example").DataTable();
+      });
+    </script>
+
+
+    <br />
+    <center>Above codes belong to respective authors</center>
+
+    <center>Powered <a href="https://zero2maker.org" target="_blank"></a></center>
+  </body>
+</html>
