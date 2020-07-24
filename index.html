@@ -33,7 +33,7 @@
       >
         <thead>
           <tr>
-            <td>Main Component/td>
+            <td>Main Component</td>
             <td>Project Name</td>
             <td>Other Components</td>
             <td>Circuit Diagram</td>
@@ -58,7 +58,7 @@
 			<td>LED</td>
 			<td>Multiple LED Blinking</td>
 			<td></td>
-			<td><a href="https://drive.google.com/uc?id=1yYCgoBkCV31DvEhnt-3ocwIB14_PCIpp" target="_blank"> Circuit Diagram </a></td>
+			<td>https://drive.google.com/uc?id=1yYCgoBkCV31DvEhnt-3ocwIB14_PCIpp</td>
 			<td>https://gist.github.com/japarejiya/d1c5c5ca2ef5f3d9abfeaae40af6ed25</td>
 			<td>https://www.youtube.com/watch?v=fEyxTPxde1c</td>
 			<td>No</td>
@@ -96,13 +96,20 @@
                 $(this).html(
                   "<a href='" +
                     t +
-                    "' class='btn btn-primary' target='_blank'>Search Now</a>"
+                    "' class='btn btn-primary' target='_blank'>Video</a>"
                 );
               } else if (t.includes("https://gist.github.com/")) {
                 $(this).html(
                   "<a href='" +
                     t +
                     "' class='btn btn-success' target='_blank'>Open</a>"
+                );
+              }
+              else if (t.includes("https://drive.google.com")) {
+                $(this).html(
+                  "<a href='" +
+                    t +
+                    "' class='btn btn-success' target='_blank'>Circuit Diagram</a>"
                 );
               }
             });
